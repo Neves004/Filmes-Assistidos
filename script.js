@@ -168,7 +168,7 @@ function carregarFilmes() {
   // Renderiza usando o índice ORIGINAL para referencia nas ações
   filmesParaMostrar.forEach(({ f, idx }) => {
     const artigo = document.createElement("article");
-    artigo.classList.add("entry");
+    artigo.classList.add("entry"); //dang v
     artigo.innerHTML = `
       ${f.imagem ? `<img src="${f.imagem}" class="capa">` : `<div class="capa" style="background:#ddd;"></div>`}
       <div class="info">
