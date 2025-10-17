@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Filmes Assistidos</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Filmes Assistidos🐳</h1>
+        </header>
+
+        <div class="botoes-inicial">
+            <button id="abrir-form" class="btn-add">➕ Adicionar Filme</button>
+            <button id="editar-filme" disabled>✏️ Editar Filme</button>
+            <button id="excluir-filme" disabled>🗑️ Excluir Filme</button>
+            <button id="ordenar-filmes">🔄 Ordenar Filmes</button>
+        </div>
+
+        <div class="barra-pesquisa">
+            <input type="text" id="pesquisa" placeholder="Pesquisar por título, gênero, data ou nota..." />
+        </div>
+
+        <section id="lista-filmes"></section>
+    </div>
+
+    <div id="modal-form" class="modal">
+        <div class="modal-content">
+            <span class="fechar">&times;</span>
+            <form id="form-filme">
+                <h2 id="form-titulo">➕ Adicionar Filme</h2>
+
+                <label>↪︎ Capa do Filme:</label>
+                <input type="file" id="imagem" accept="image/*">
+
+                <label>↪︎ Data assistida:</label>
+                <input type="date" id="data" required>
+
+                <label>↪︎ Título:</label>
+                <input type="text" id="titulo" required>
+
+                <label>↪︎ Gênero:</label>
+                <input type="text" id="genero" required>
+
+                <label>↪︎ Nota (1 a 5):</label>
+                <input type="number" id="nota" min="1" max="5" required>
+
+                <label>↪︎ Comentário:</label>
+                <textarea id="comentario" required></textarea>
+
+                <button type="submit">Salvar🎬</button>
+                <button type="button" id="cancelar" style="display:none;">Cancelar Edição</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
